@@ -1,4 +1,4 @@
-# Vault101 - Client-Server Repo #
+#Client-Server Repo #
 
 This is the repository for the Vault101 payroll system for the client and server. The project is running on Node.JS and is currently in version 0.0.1 (preparation for alpha release).
 
