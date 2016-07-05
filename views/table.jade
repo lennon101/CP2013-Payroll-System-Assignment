@@ -1,0 +1,53 @@
+//
+   Created by alice_000 on 13/10/2015.
+
+.row
+   .col-lg-12
+      h1.page-header Search
+   // /.col-lg-12
+// /.row
+.row
+   .col-lg-12
+      .panel.panel-default
+         .panel-heading
+            | Search An Employee Form
+         .panel-body
+            .row
+               .col-lg-6
+                  form(role='form')
+                     h3 Search For an Employee
+                     .form-group.input-group
+                        input.form-control.viewAndFind(type='text' name='firstName')
+                        span.input-group-btn
+                           button.btn.btn-default(type='button' id='find')
+                              i.fa.fa-search
+                     p "First name Last name" comma separated: John, Smith
+
+
+               button.btn.btn-default(type='button', id='findAndView') View
+         // /.row (nested)
+      // /.panel-body
+   // /.panel
+// /.col-lg-12
+
+
+
+.panel.panel-primary
+   .panel-heading
+      h4 Table of all users
+   .panel-body
+      table.table.table-hover
+         tr
+            td first name
+            td last name
+            td ID number
+         tbody
+            each item in allUser
+               tr
+                  td #{item.firstName}
+                  td #{item.lastName}
+                  td
+                     a(href='users/current/#{item.id}')
+                        #{item.id}
+
+

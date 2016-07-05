@@ -1,0 +1,56 @@
+//
+   Created by danelennon on 25/10/15.
+
+.row
+   .col-lg-12
+      h1.page-header Add Reimbursement
+   // /.col-lg-12
+// /.row
+.row
+   .col-lg-12
+      .panel.panel-default
+         .panel-heading
+            | New Reimbursement Form
+         .panel-body
+            .row
+               .col-lg-6
+                  form(role='form')
+                     .form-group
+                        label Employee Name
+                        input.form-control.reimburse(placeholder='Enter Name', name='firstName')
+                        p.help-block Format: "First Name" "Last Name"
+                     .form-group
+                        label Reimbursement For:
+                        .checkbox.reimburse
+                           label
+                              input(type='checkbox', name='reimbursementType', value='Accomodation')
+                              | Accomodation
+                        .checkbox.reimburse
+                           label
+                              input(type='checkbox', name='reimbursementType', value='Transport')
+                              | Transport
+                        .checkbox.reimburse
+                           label
+                              input(type='checkbox', name='reimbursementType', value='Meals')
+                              | Meals
+                        .checkbox.reimburse
+                           label
+                              input(type='checkbox', name='reimbursementType', value='other')
+                              | Other
+                     label If 'other' describe below:
+                     input.form-control.reimburse(placeholder="Enter 'other' details")
+                     p.help-block
+                     .form-group
+                        label Enter Dollar Amount to Reimburse
+                        input.form-control.reimburse(placeholder='Enter Name', name='dollarAmount')
+                        p.help-block
+                     .form-group
+                        label Details/Notes
+                        textarea.form-control.reimburse(rows='3', name='details')
+                     button.btn.btn-default(type='submit') Submit Button
+                     button.btn.btn-default(type='reset') Reset Button
+                     button.btn.btn-default(type='button', id="reimburse") Reimburse
+            // /.row (nested)
+         // /.panel-body
+      // /.panel
+   // /.col-lg-12

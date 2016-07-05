@@ -1,0 +1,39 @@
+
+.row
+   .col-lg-12
+      h1.page-header Post a Time Card
+   // /.col-lg-12
+// /.row
+.row
+   .col-lg-12
+      .panel.panel-default
+         .panel-heading
+            | New Time Card Form
+         .panel-body
+            .row
+               .col-lg-6
+                  form(role='form', action='/users/postATimeCard', method='POST')
+                     .form-group
+                        .form-group
+                           .row
+                              .col-md-6
+                                 label First Name
+                                 input.form-control.postATimeCard(placeholder='Enter First Name', name='firstName', id="firstName")
+                              .col-md-6
+                                 label Last Name
+                                 input.form-control.postATimeCard(placeholder='Enter Last Name', name='lastName', id="lastName")
+                                 p.help-block
+                        .form-group
+                           .row
+                              .col-md-3
+                                 label Hours Worked
+                                 input.form-control.postATimeCard(placeholder='Enter hours', name='hoursWorked', id="hoursWorked")
+                                 p.help-block
+                        .form-group
+                           label Details of work undertaken
+                           textarea.form-control.postATimeCard(rows='3', name="details")
+                        .form-group
+                           button.btn.btn-default.radio-label(type='reset') Reset Button
+                           button.btn.btn-success(type='button' id='postingATimeCard') Post Time Card
+
+

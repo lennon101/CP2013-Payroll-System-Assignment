@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> People and ID numbers </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/allUsers.js"></script>
+
+</head>
+<body>
+<table border="1">
+<tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>person Id</td>
+</tr>
+</table>
+
+<form action="/allUsers" method="GET">
+    <div id="newInformation"></div>
+</form>
+
+<form action="/id" method="POST">
+    <label for="aField">id number:  </label>
+    <textarea id="aField" name="idNumber"></textarea> <br/>
+    <div id="details"></div>
+    <button type="submit">get id</button>
+</form>
+
+
+ <a href="{{ URL::route('normindex') }}" class="btn btn-default"> Norm Index </a>
+</body>
+</html>

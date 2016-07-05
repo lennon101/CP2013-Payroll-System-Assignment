@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/addingNewEmployee.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->n.cs
+    <link href="../bower_components/metisMenu/dist/metisMenu.mis" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--import Navigation bar html -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            <!--include Navigation bar content -->
+            $("#includedContent").load("navBar.html");
+
+            <!--include Date Picker content -->
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    <!--import Navigation bar html -->
+    <div id="includedContent"></div>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Add A New Employee</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        New Employee Form
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form role="form" action="/users/addNewUser" method="POST">
+                                    <div class="form-group">
+
+                                        <div class="form-group">
+                                            <label>Employee Type</label>
+
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1"
+                                                           value="option1" checked>Salary Worker
+                                                </label>
+                                            </div>
+
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios2"
+                                                           value="option2">Hourly Worker
+                                                </label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <label>Title </label>
+                                                    <select class="form-control">
+                                                        <option>Mr</option>
+                                                        <option>Mrs</option>
+                                                        <option>Miss</option>
+                                                        <option>Dr</option>
+                                                        <option>Sir</option>
+                                                        <option>Hon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>First Name </label>
+                                                    <input class="form-control" placeholder="Enter First Name"
+                                                           name="firstName">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Last Name </label>
+                                                    <input class="form-control" placeholder="Enter Last Name"
+                                                           name="lastName">
+
+                                                    <p class="help-bl`ock"></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Gender</label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1"
+                                                       value="option1" checked>Male
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2"
+                                                       value="option2">Female
+                                            </label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Date Of Birth </label>
+
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <p><input type="text" id="datepicker"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Contact Number</label>
+                                                    <input class="form-control" placeholder="Enter mobile/home" name="conactNumber"
+                                                           id="conactNumber">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Employee email </label>
+                                                    <input class="form-control" placeholder="Enter email" name="email"
+                                                           id="email">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Residential Address</label>
+                                                    <input class="form-control" placeholder="Enter Residential Address" name="residentialAddress"
+                                                           id="residentialAddress">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Postal Address</label>
+                                                    <input class="form-control" placeholder="Enter Postal Address" name="postalAddress"
+                                                           id="postalAddress">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                                <label>Union Membership</label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1"
+                                                           value="option1" checked>No
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2"
+                                                           value="option2">Yes
+                                                </label>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Union Name</label>
+                                                    <input class="form-control" placeholder="Enter Union" name="unionName"
+                                                           id="unionName">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Contribution</label>
+                                                    <input class="form-control" placeholder="Enter Contribution" name="contribution"
+                                                           id="contribution">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Upload Employee Portrait</label>
+                                            <input type="file">
+                                        </div>
+
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                        <button type="button" id="addNew" class="btn btn-default"
+                                                onclick="return confirm('Are you sure?')">Add New Employee
+                                        </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

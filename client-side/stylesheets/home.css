@@ -1,0 +1,46 @@
+#viewEmployee{
+    cursor: pointer;
+}
+#addEmployee{
+    cursor: pointer;
+}
+
+#addEmployeeDashBoardItem{
+    cursor: pointer;
+}
+#deleteEmployeeDashBoardItem{
+    cursor: pointer;
+}
+
+#postATimeCardDashboardItem{
+    cursor: pointer;
+}
+
+#viewAllEmployees{
+    cursor: pointer;
+}
+
+#viewAllEmployeeDashBoardItem{
+    cursor: pointer;
+}
+
+#addReimbursement{
+    cursor: pointer;
+}
+#viewReimbursement{
+    cursor: pointer;
+}
+#deleteEmployee{
+    cursor: pointer;
+}
+#postATimeCard{
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-widget-content {
+    background: #999 none
+}
+
+.radio-label{
+    margin-right: 10px
+}

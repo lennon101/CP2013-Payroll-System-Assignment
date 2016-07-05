@@ -1,0 +1,99 @@
+.row
+    .col-lg-12
+        h1.page-header Add A New Employee
+    // /.col-lg-12
+// /.row
+.row
+    .col-lg-12
+        .panel.panel-default
+            .panel-heading
+                | New Employee Form
+            .panel-body
+                .row
+                    .col-lg-6
+                        form(role='form', action='/users/addNewUser', method='POST')
+                            .form-group
+                                .form-group
+                                    label Employee Type
+                                    .radio
+                                        label
+                                            input#optionsRadios1.addEmployee(type='radio', name='optionsRadios', value='salary', checked='')
+                                            | Salary Worker
+                                    .radio
+                                        label
+                                            input#optionsRadios2.addEmployee(type='radio', name='optionsRadios', value='hourly')
+                                            | Hourly Worker
+                                .form-group
+                                    .row
+                                        .col-md-2
+                                            label Title
+                                            select.form-control
+                                                option Mr
+                                                option Mrs
+                                                option Miss
+                                                option Dr
+                                                option Sir
+                                                option Hon
+                                .form-group
+                                    .row
+                                        .col-md-6
+                                            label First Name
+                                            input.form-control.addEmployee(placeholder='Enter First Name', name='firstName')
+                                        .col-md-6
+                                            label Last Name
+                                            input.form-control.addEmployee(placeholder='Enter Last Name', name='lastName')
+                                            p.help-block
+                                .form-group
+                                    label Gender
+                                    label.radio-inline.radio-label
+                                        | Male
+                                    input#optionsRadiosInline1(type='radio', name='optionsRadiosInline', value='Male', checked='')
+                                    label.radio-inline.radio-label
+                                        | Female
+                                    input#optionsRadiosInline2(type='radio', name='optionsRadiosInline', value='Female')
+                                .form-group
+                                    label Date Of Birth
+                                    .row
+                                        .col-md-3
+                                            input#datepicker(type='text')
+                                .form-group
+                                    .row
+                                        .col-md-6
+                                            label Contact Number
+                                            input#conactNumber.form-control.addEmployee(placeholder='Enter mobile/home', name='contactNumber')
+                                        .col-md-6
+                                            label Employee email
+                                            input#email.form-control.addEmployee(placeholder='Enter email', name='email')
+                                .form-group
+                                    .row
+                                        .col-md-6
+                                            label Residential Address
+                                            input#residentialAddress.form-control.addEmployee(placeholder='Enter Residential Address', name='residentialAddress')
+                                        .col-md-6
+                                            label Postal Address
+                                            input#postalAddress.form-control.addEmployee(placeholder='Enter Postal Address', name='postalAddress')
+                                .form-group
+                                    label Union Membership
+                                    label.radio-inline.radio-label
+                                        | No
+                                    input#optionsRadiosInline1(type='radio', name='optionsRadiosInline', value='option1', checked='')
+                                    label.radio-inline.radio-label
+                                        | Yes
+                                    input#optionsRadiosInline2(type='radio', name='optionsRadiosInline', value='option2')
+                                    .row
+                                        .col-md-6
+                                            label Union Name
+                                            input#unionName.form-control.addEmployee(placeholder='Enter Union', name='unionName')
+                                        .col-md-6
+                                            label Contribution
+                                            input#contribution.form-control.addEmployee(placeholder='Enter Contribution', name='contribution')
+                                .form-group
+                                    label Upload Employee Portrait
+                                    input(type='file')
+                                button#addNewEmployeeButton.btn.btn-success.radio-label(type='button', onclick="return confirm('Are you sure?')")
+                                    | Add New Employee
+                                button.btn.btn-default.radio-label(type='reset') Reset
+                                // /.row (nested)
+                                // /.panel-body
+                                // /.panel
+                                // /.col-lg-12

@@ -1,0 +1,46 @@
+
+h1 User Information
+   table
+      tr
+         td Id :
+            td #{item.id}
+            tr
+            td firstName :
+            td #{item.firstName}
+            tr
+            td lastName :
+            td #{item.lastName}
+            tr
+            td nextPay:
+            td #{item.nextPay}
+            tr
+            td Union:
+            td #{item.union.contribution}
+            tr
+            td Total Pay:
+            td #{item.totalPay}
+            tr
+            td Reimbursements:
+            tr
+            td Type:
+            td #{item.reimbursements.reimbursementType}
+            tr
+            td Details:
+            td #{item.reimbursements.details}
+            tr
+            td Amount:
+            td #{item.reimbursements.amount}
+            tr
+            td Time Card:
+            tr
+            td Hours worked:
+            td #{item.timeCard.hoursWorked}
+            tr
+            td Details:
+            td #{item.timeCard.details}
+            tr
+            td Mine Site:
+            td #{item.mineSite}
+            tr
+            td Payment Type:
+            td #{item.payType}
